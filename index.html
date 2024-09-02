@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ticket Booking App</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <!-- Header/Navbar -->
+    <header>
+        <nav class="navbar">
+            <button class="menu-toggle" id="menuToggle">☰ Menu</button>
+            <div class="logo">YourLogo</div>
+            <div class="nav-links" id="navLinks">
+                <ul class="main-menu">
+                    <li><a href="#">Home</a></li>
+                    <li><a href="#">Book Tickets</a></li>
+                    <li class="has-submenu">
+                        <a href="#">Confirm Ticket</a>
+                        <ul class="sub-menu">
+                            <li><a href="#">Bus Ticket</a></li>
+                            <li><a href="#">Train Ticket</a></li>
+                            <li><a href="#">Cab Ticket</a></li>
+                            <li><a href="#">Flight Ticket</a></li>
+                        </ul>
+                    </li>
+                    <li><a href="#">My Bookings</a></li>
+                    <li><a href="#">Support</a></li>
+                </ul>
+            </div>
+            <div class="user-section">
+                <div id="authLinks">
+                    <button id="loginLink">Login</button>
+                    <button id="signupLink">Sign Up</button>
+                </div>
+                <div id="userMenu" class="hidden">
+                    <div class="user-account">
+                        <img src="user-icon.png" alt="User">
+                        <ul class="user-menu">
+                            <li><a href="#">Profile</a></li>
+                            <li><a href="#">Settings</a></li>
+                            <li><a href="#" id="logoutBtn">Logout</a></li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </nav>
+    </header>
+
+    <!-- Booking Banner -->
+    <section class="booking-banner">
+        <h1>Book Your Tickets</h1>
+        <div class="booking-form" id="bookingSection">
+            <!-- Your booking form elements go here -->
+        </div>
+    </section>
+
+    <!-- Authentication Modal -->
+    <div id="authModal" class="modal">
+        <div class="modal-content">
+            <span class="close">&times;</span>
+            <div id="loginForm" class="auth-forms">
+                <h2>Login</h2>
+                <div>
+                    <label for="loginUsername">Username:</label>
+                    <input type="text" id="loginUsername">
+                </div>
+                <div>
+                    <label for="loginPassword">Password:</label>
+                    <input type="password" id="loginPassword">
+                </div>
+                <button id="loginBtn">Login</button>
+                <p>Don't have an account? <a href="#" id="showSignup">Sign up</a></p>
+            </div>
+            <div id="signupForm" class="auth-forms hidden">
+                <h2>Sign Up</h2>
+                <div>
+                    <label for="signupUsername">Username:</label>
+                    <input type="text" id="signupUsername">
+                </div>
+                <div>
+                    <label for="signupEmail">Email:</label>
+                    <input type="email" id="signupEmail">
+                </div>
+                <div>
+                    <label for="signupPassword">Password:</label>
+                    <input type="password" id="signupPassword">
+                </div>
+                <button id="signupBtn">Sign Up</button>
+                <p>Already have an account? <a href="#" id="showLogin">Login</a></p>
+            </div>
+        </div>
+    </div>
+
+    <script src="scripts.js"></script>
+</body>
+</html>
